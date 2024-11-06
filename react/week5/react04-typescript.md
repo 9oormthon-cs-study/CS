@@ -35,13 +35,18 @@ TypeScript는 구조적 타입 시스템을 통해 이 문제를 해결합니다
 
 또한, TypeScript는 클래스와 인터페이스, 컴파일타임 타입 체크를 지원하여, 객체 지향 프로그래밍(OOP)의 장점을 JavaScript에 가져옵니다.
 
+---
+
 ### ⓶ 타입스크립트는 브라우저에서 인식할 수 있나요?
+
 없습니다. 브라우저가 인식할 수 있는 파일이 HTML, CSS , JS입니다. <br/>
 그렇기에 TS 컴파일러(tsc)가 TS 파일을 JS 파일로 트랜스파일링합니다. 이 때 트랜스파일링에 필요한 tsconfig.json가 필요합니다. 
 `tsconfig.json`은 TS를 JS로 변환시키는 컴파일 설정을 정의한 파일입니다.
 
 Scanner (scanner.ts) -> Parser (parser.ts)
 -> Binder (binder.ts) -> Checker (checker.ts) -> Emitter (emitter.ts)
+
+---
 
 ### ⓷ 본인이 정의해둔 타입 스키마를 돌려쓰고 싶을 때 즉, 아래 코드에서 name,address만 재사용하고 타입을 재정의하고 싶을 때 어떤 타입스크립트 문법을 사용할까요?
 
@@ -70,10 +75,13 @@ Type에서 Keys에 해당하는 속성만 선택하여 새 타입을 정의합�
 Omit<Type, Keys>: <br/>
 Type에서 Keys에 해당하는 속성을 제외한 나머지 속성들로 새 타입을 정의합니다.
 
+---
+
 ### ⓸ TypeScript의 제너릭(Generic)이 무엇이고 어떻게 사용하시나요? 
 Generic은 특정 타입에 고정되지 않고, 함수나 클래스, 인터페이스가 사용할 타입을 외부에서 지정할 수 있도록 만드는 기능입니다. 
 
 저는 보통 TypeScript에서 HTTP 메소드와 함께 제너릭을 사용했습니다. API 요청이 다양한 타입의 데이터를 가져오거나 보낼 수 있기 때문에, 제너릭을 활용하면 서버와 클라이언트 간 데이터 타입의 일관성을 보장할 수 있기 때문입니다. 
+
 
 ## 레퍼런스
 - ts 강추 [공부자료](https://www.typescriptlang.org/ko/docs/handbook/2/basic-types.html)
